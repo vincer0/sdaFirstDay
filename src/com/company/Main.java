@@ -18,33 +18,28 @@ public class Main {
 
         fahrenheitTemp = (float) 1.8 * celsiusTemp + 32;
 
-        System.out.println(""+celsiusTemp+" stopni Celsjusza to: "+fahrenheitTemp+" Fahrenheitow");
+        System.out.println("" + celsiusTemp + " stopni Celsjusza to: " + fahrenheitTemp + " Fahrenheitow");
 
         /**
          * Zadanie 2
          */
         System.out.println("Zadanie 2:");
         int[] numbers = new int[3];
-        for(int i = 0; i < numbers.length; i++)
-        {
-            System.out.println("Podaj "+(i+1)+" liczbe");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Podaj " + (i + 1) + " liczbe");
             numbers[i] = scanner.nextInt();
         }
         int min = numbers[0];
         int max = 0;
-        for(int i = 0; i < numbers.length; i++)
-        {
-            if(numbers[i] < min)
-            {
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] < min) {
                 min = numbers[i];
-            }
-            else
-            {
+            } else {
                 max = numbers[i];
             }
         }
-        System.out.println("Liczba najmniejsza: "+min);
-        System.out.println("Liczba najwieksza: "+max);
+        System.out.println("Liczba najmniejsza: " + min);
+        System.out.println("Liczba najwieksza: " + max);
         System.out.println();
 
         /**
@@ -59,17 +54,13 @@ public class Main {
 
         double bmi = weight / (Math.pow(height / 100, 2));
 
-        System.out.println("BMI: " +bmi);
+        System.out.println("BMI: " + bmi);
 
-        if(bmi > 24.9)
-        {
+        if (bmi > 24.9) {
             System.out.println("To jest nadwaga!");
-        }
-        else if(bmi < 18.5)
-        {
+        } else if (bmi < 18.5) {
             System.out.println("To jest niedowaga!");
-        }
-        else {
+        } else {
             System.out.println("To jest poprawna waga!");
         }
 
@@ -81,19 +72,14 @@ public class Main {
         System.out.print("Podaj swój dochod:");
         float gain = scanner.nextFloat();
         double tax = 0;
-        System.out.println("Twoj dochod to: "+gain);
-        if(gain <  85528.0)
-        {
+        System.out.println("Twoj dochod to: " + gain);
+        if (gain < 85528.0) {
             System.out.println("Twoj podatek to 18% podstawy minus 556,02zl");
             tax = ((gain * 18) / 100) - 556.02;
-            System.out.println("Podatek wynosi: "+tax);
-        }
-        else
-        {
+        } else {
             System.out.println("Twoj podatek wynosi 14.839,02zl plus +32% nadwyzki ponad 85.528,00");
             tax = 14839.02 + ((gain * 32) / 100);
-            System.out.println("Podatek wynosi: "+tax);
         }
-
+        System.out.println("Podatek wynosi: " + tax);
     }
 }
